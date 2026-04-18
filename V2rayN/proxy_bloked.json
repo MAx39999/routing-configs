@@ -1,0 +1,43 @@
+[
+  {
+    "outboundTag": "block",
+    "domain": [
+      "geosite:category-ads-all"
+    ],
+    "enabled": true,
+    "remarks": "Block Ads"
+  },
+  {
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private"
+    ],
+    "enabled": true,
+    "remarks": "Direct local"
+  },
+  {
+    "outboundTag": "proxy",
+    "domain": [
+      "geosite:ru-blocked"
+    ],
+    "enabled": true,
+    "remarks": "Proxy Blocked Domains"
+  },
+  {
+    "outboundTag": "proxy",
+    "ip": [
+      "geoip:ru-blocked",
+      "geoip:ru-blocked-community",
+      "geoip:re-filter",
+      "geoip:telegram"
+    ],
+    "enabled": true,
+    "remarks": "Proxy blocked IPs"
+  },
+  {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "enabled": true,
+    "remarks": "Direct all othen"
+  }
+]
