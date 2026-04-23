@@ -2,10 +2,10 @@
   {
     "outboundTag": "block",
     "domain": [
-      "geosite:category-ads-all"
+      "geosite:category-ads"
     ],
     "enabled": true,
-    "remarks": "Block Ads"
+    "remarks": "Block Ads & Telemetry"
   },
   {
     "outboundTag": "direct",
@@ -13,7 +13,31 @@
       "geoip:private"
     ],
     "enabled": true,
-    "remarks": "Direct local"
+    "remarks": "Direct local IPs"
+  },
+  {
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:private"
+    ],
+    "enabled": true,
+    "remarks": "Direct local domains"
+  },
+  {
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:ru-available-only-inside"
+    ],
+    "enabled": true,
+    "remarks": "Direct RU avalible only inside"
+  },
+  {
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:yandex"
+    ],
+    "enabled": true,
+    "remarks": "Direct yandex IPs"
   },
   {
     "outboundTag": "proxy",
@@ -21,18 +45,17 @@
       "geosite:ru-blocked"
     ],
     "enabled": true,
-    "remarks": "Proxy Blocked Domains"
+    "remarks": "Proxy bloked sites"
   },
   {
     "outboundTag": "proxy",
     "ip": [
       "geoip:ru-blocked",
       "geoip:ru-blocked-community",
-      "geoip:re-filter",
-      "geoip:telegram"
+      "geoip:re-filter"
     ],
     "enabled": true,
-    "remarks": "Proxy blocked IPs"
+    "remarks": "Proxy bloked IPs"
   },
   {
     "network": "tcp,udp",
