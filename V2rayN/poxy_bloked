@@ -1,0 +1,90 @@
+[
+  {
+    "outboundTag": "block",
+    "domain": [
+      "geosite:category-ads-all"
+    ],
+    "enabled": true,
+    "remarks": "Block Ads & Telemetry"
+  },
+  {
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:win-update"
+    ],
+    "enabled": true,
+    "remarks": "Windows telemetry"
+  },
+  {
+    "outboundTag": "direct",
+    "protocol": [
+      "bittorrent"
+    ],
+    "enabled": true,
+    "remarks": "BitTorrent direct"
+  },
+  {
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private"
+    ],
+    "enabled": true,
+    "remarks": "Direct local IPs"
+  },
+  {
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:private"
+    ],
+    "enabled": true,
+    "remarks": "Direct local domains"
+  },
+  {
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:ru-available-only-inside"
+    ],
+    "enabled": true,
+    "remarks": "Direct RU avalible only inside"
+  },
+  {
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:yandex"
+    ],
+    "enabled": true,
+    "remarks": "Direct yandex IPs"
+  },
+  {
+    "outboundTag": "proxy",
+    "domain": [
+      "geosite:ru-blocked"
+    ],
+    "enabled": true,
+    "remarks": "Proxy bloked sites"
+  },
+  {
+    "outboundTag": "proxy",
+    "ip": [
+      "geoip:ru-blocked",
+      "geoip:ru-blocked-community",
+      "geoip:re-filter"
+    ],
+    "enabled": true,
+    "remarks": "Proxy bloked IPs"
+  },
+  {
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:ru-whitelist"
+    ],
+    "enabled": true,
+    "remarks": "Direct IPs in whitelist"
+  },
+  {
+    "network": "tcp,udp",
+    "outboundTag": "direct",
+    "enabled": true,
+    "remarks": "Direct all othen"
+  }
+]
