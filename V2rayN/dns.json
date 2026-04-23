@@ -1,0 +1,21 @@
+{
+  "hosts": {
+    "dns.google": ["8.8.8.8", "8.8.4.4"],
+    "common.dns.yandex.net": ["77.88.8.8", "77.88.8.1"]
+  },
+  "servers": [
+    {
+      "address": "https://dns.google/dns-query",
+      "domains": ["geosite:ru-blocked"]
+    },
+    {
+      "address": "https://common.dns.yandex.net/dns-query",
+      "domains": ["geosite:ru-available-only-inside"],
+      "expectIPs": ["geoip:ru", "geoip:ru-whitelist"]
+    },
+    "localhost"
+  ],
+  "queryStrategy": "UseIPv4",
+  "disableFallbackIfMatch": true,
+  "tag": "dns_inbound"
+}
