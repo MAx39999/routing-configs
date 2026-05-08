@@ -5,7 +5,15 @@
       "geosite:category-ads"
     ],
     "enabled": true,
-    "remarks": "Block Ads & Telemetry"
+    "remarks": "Block ads"
+  },
+  {
+    "outboundTag": "direct",
+    "protocol": [
+      "bittorrent"
+    ],
+    "enabled": true,
+    "remarks": "BitTorrent direct"
   },
   {
     "outboundTag": "direct",
@@ -13,7 +21,7 @@
       "geoip:private"
     ],
     "enabled": true,
-    "remarks": "Direct local IPs"
+    "remarks": "Local network"
   },
   {
     "outboundTag": "direct",
@@ -21,7 +29,7 @@
       "geosite:private"
     ],
     "enabled": true,
-    "remarks": "Direct local domains"
+    "remarks": "Local domains"
   },
   {
     "outboundTag": "direct",
@@ -29,15 +37,16 @@
       "geosite:ru-available-only-inside"
     ],
     "enabled": true,
-    "remarks": "Direct RU avalible only inside"
+    "remarks": "Russian services and Yandex (domains)"
   },
   {
     "outboundTag": "direct",
     "ip": [
-      "geoip:yandex"
+      "geoip:yandex",
+      "geoip:ru-whitelist"
     ],
     "enabled": true,
-    "remarks": "Direct yandex IPs"
+    "remarks": "Yandex and RU whitelist (IPs)"
   },
   {
     "outboundTag": "proxy",
@@ -45,7 +54,7 @@
       "geosite:ru-blocked"
     ],
     "enabled": true,
-    "remarks": "Proxy bloked sites"
+    "remarks": "Blocked domains via proxy"
   },
   {
     "outboundTag": "proxy",
@@ -55,12 +64,20 @@
       "geoip:re-filter"
     ],
     "enabled": true,
-    "remarks": "Proxy bloked IPs"
+    "remarks": "Blocked IPs via proxy"
+  },
+  {
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:ru"
+    ],
+    "enabled": true,
+    "remarks": "Other Russian traffic direct"
   },
   {
     "network": "tcp,udp",
     "outboundTag": "direct",
     "enabled": true,
-    "remarks": "Direct all othen"
+    "remarks": "Everything else direct"
   }
 ]
