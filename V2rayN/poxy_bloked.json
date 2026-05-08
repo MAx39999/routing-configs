@@ -32,8 +32,7 @@
   {
     "outboundTag": "direct",
     "domain": [
-      "geosite:ru-available-only-inside",
-      "geosite:yandex"
+      "geosite:ru-available-only-inside"
     ],
     "enabled": true,
     "remarks": "Russian services and Yandex (domains)"
