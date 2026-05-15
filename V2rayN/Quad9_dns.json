@@ -1,0 +1,20 @@
+{
+  "hosts": {
+    "dns.quad9.net": ["9.9.9.9", "149.112.112.112"]
+  },
+  "servers": [
+    {
+      "address": "https://dns.quad9.net/dns-query",
+      "domains": ["geosite:ru-blocked"]
+    },
+    {
+      "address": "https://dns.quad9.net/dns-query",
+      "domains": ["geosite:ru-available-only-inside"],
+      "expectIPs": ["geoip:ru", "geoip:ru-whitelist"]
+    },
+    "localhost"
+  ],
+  "queryStrategy": "UseIPv4",
+  "disableFallbackIfMatch": true,
+  "tag": "dns_inbound"
+}
